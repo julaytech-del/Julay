@@ -7,9 +7,9 @@ import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "JULAY — Premium Software Development",
+  title: "Julay Group LLC — DevOps & Software Solutions",
   description:
-    "We build scalable digital products — web apps, mobile apps, SaaS, AI systems, and enterprise software that power real business growth.",
+    "Julay Group LLC delivers enterprise DevOps, cloud infrastructure, AI chatbots, and office management systems. US-registered, globally trusted.",
 };
 
 export default function HomePage() {
