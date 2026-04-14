@@ -5,34 +5,36 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "JULAY — Premium Software Development",
-    template: "%s | JULAY",
+    default: "Julay Group LLC — DevOps & Software Solutions",
+    template: "%s | Julay Group",
   },
   description:
-    "JULAY builds scalable digital products — web apps, mobile apps, SaaS platforms, AI systems, and enterprise software that power real business growth.",
+    "Julay Group LLC delivers enterprise DevOps, cloud infrastructure, custom software, AI chatbots, and office management systems. US-registered, globally trusted.",
   keywords: [
+    "DevOps",
+    "CI/CD",
+    "cloud infrastructure",
+    "AWS",
     "software development",
-    "web development",
-    "mobile apps",
-    "SaaS",
-    "AI solutions",
+    "AI chatbots",
+    "office management systems",
     "enterprise software",
-    "React",
-    "Next.js",
+    "Julay Group LLC",
+    "julay.org",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://julay.dev",
-    siteName: "JULAY",
-    title: "JULAY — Premium Software Development",
+    url: "https://julaygroup.com",
+    siteName: "Julay Group LLC",
+    title: "Julay Group LLC — DevOps & Software Solutions",
     description:
-      "We build scalable digital products that power your business.",
+      "Enterprise DevOps, cloud infrastructure, AI chatbots, and custom software. Built to scale.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JULAY — Premium Software Development",
-    description: "We build scalable digital products that power your business.",
+    title: "Julay Group LLC — DevOps & Software Solutions",
+    description: "Enterprise DevOps, cloud infrastructure, AI chatbots, and custom software.",
   },
   robots: {
     index: true,

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about JULAY — our mission, values, and the team behind the software.",
+    "Learn about Julay Group LLC — a US-registered DevOps & software company delivering enterprise automation, AI chatbots, and cloud solutions.",
 };
 
 const values = [
@@ -35,33 +35,29 @@ const values = [
   },
 ];
 
-const team = [
+const expertise = [
   {
-    name: "Alex Mercer",
-    role: "Co-Founder & CTO",
-    initials: "AM",
-    bio: "10+ years in distributed systems and full-stack engineering. Former staff engineer at a top-5 fintech unicorn.",
+    area: "DevOps & Cloud",
+    initials: "D&C",
+    description: "AWS infrastructure, Terraform, Docker, Kubernetes, GitHub Actions CI/CD, monitoring and alerting.",
     gradient: "from-indigo-500 to-violet-600",
   },
   {
-    name: "Jordan Lee",
-    role: "Co-Founder & Design Lead",
-    initials: "JL",
-    bio: "Product designer and frontend engineer with deep expertise in design systems and conversion-focused UX.",
+    area: "AI & Automation",
+    initials: "AI",
+    description: "LLM integration, RAG architectures, chatbot development with Claude & GPT-4, intelligent workflow automation.",
     gradient: "from-violet-500 to-pink-600",
   },
   {
-    name: "Priya Nair",
-    role: "Lead AI Engineer",
-    initials: "PN",
-    bio: "ML researcher turned product engineer. Specializes in LLM integration, RAG architectures, and AI-powered automation.",
+    area: "Full-Stack Engineering",
+    initials: "FSE",
+    description: "React, Next.js, Node.js, Python, PostgreSQL, MongoDB — production-grade systems from API to UI.",
     gradient: "from-cyan-500 to-indigo-600",
   },
   {
-    name: "David Santos",
-    role: "Backend Architect",
-    initials: "DS",
-    bio: "Distributed systems specialist with a track record of building platforms that handle millions of requests per day.",
+    area: "Systems Integration",
+    initials: "SI",
+    description: "API design, third-party integrations, legacy system modernization, and enterprise data pipelines.",
     gradient: "from-emerald-500 to-cyan-600",
   },
 ];
@@ -75,15 +71,15 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-3">
-              About JULAY
+              About Julay Group LLC
             </p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
-              We Engineer
+              We Automate.
               <br />
-              <span className="text-gradient">Software That Matters</span>
+              <span className="text-gradient">We Deploy. We Scale.</span>
             </h1>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              JULAY was founded on one belief: great software is a strategic advantage. We exist to give ambitious companies access to engineering talent and execution quality that used to be reserved for well-funded startups with large in-house teams.
+              Julay Group LLC is a US-registered technology company founded on one belief: enterprise-grade DevOps, AI automation, and intelligent software should be accessible to every organization — from government agencies to growing businesses.
             </p>
           </div>
         </div>
@@ -99,13 +95,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-zinc-400 leading-relaxed">
                 <p>
-                  We're a small, senior team of engineers and designers who've shipped products across fintech, healthtech, enterprise software, and consumer apps. We've seen what separates products that thrive from those that stagnate — and it almost always comes down to the quality of the foundation.
+                  Julay Group LLC is a US-registered software and DevOps company. We specialize in building the infrastructure, automation systems, and AI-powered tools that modern organizations need to operate efficiently.
                 </p>
                 <p>
-                  JULAY exists to build that foundation correctly. We're not a staffing agency, a code factory, or an offshore team hunting for hourly work. We're technical partners who take ownership of outcomes — not just deliverables.
+                  From automated CI/CD pipelines on AWS to intelligent chatbot deployments for government and enterprise clients — we own the full lifecycle. We're not a staffing agency or code factory. We're technical partners who take ownership of outcomes.
                 </p>
                 <p>
-                  Every engagement starts with understanding your business, your users, and your constraints. From there, we architect systems that can actually grow with you.
+                  Our flagship product, <a href="https://julay.org" className="text-indigo-400 hover:text-indigo-300 transition-colors">julay.org</a>, is a testament to what we build: a production-grade AI productivity platform running on the infrastructure we designed and maintain.
                 </p>
               </div>
             </div>
@@ -185,32 +181,31 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Expertise */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-3">
-              The Team
+              Our Expertise
             </p>
-            <h2 className="text-4xl font-bold text-white mb-4">Senior Engineers, All the Way</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Deep Technical Specialization</h2>
             <p className="text-zinc-400 max-w-xl mx-auto">
-              No juniors, no account managers, no overhead. You work directly with the engineers building your product.
+              Every engagement is handled by specialists — not generalists. We bring focused expertise to every layer of your system.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {team.map((member) => (
+            {expertise.map((item) => (
               <div
-                key={member.name}
+                key={item.area}
                 className="rounded-2xl bg-white/[0.03] border border-white/[0.07] p-6 hover:bg-white/[0.05] transition-all duration-300 text-center"
               >
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.gradient} flex items-center justify-center text-lg font-bold text-white mx-auto mb-4`}
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center text-xs font-bold text-white mx-auto mb-4`}
                 >
-                  {member.initials}
+                  {item.initials}
                 </div>
-                <h3 className="text-white font-semibold mb-0.5">{member.name}</h3>
-                <p className="text-indigo-400 text-xs font-medium mb-3">{member.role}</p>
-                <p className="text-zinc-500 text-sm leading-relaxed">{member.bio}</p>
+                <h3 className="text-white font-semibold mb-2">{item.area}</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

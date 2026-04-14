@@ -3,16 +3,17 @@ import { Zap, Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   Services: [
-    { label: "Web Development", href: "/services#web" },
-    { label: "Mobile Apps", href: "/services#mobile" },
-    { label: "Desktop Software", href: "/services#desktop" },
-    { label: "SaaS Platforms", href: "/services#saas" },
-    { label: "AI Solutions", href: "/services#ai" },
+    { label: "DevOps & CI/CD", href: "/services#devops" },
+    { label: "Cloud Infrastructure", href: "/services#cloud" },
+    { label: "Custom Software", href: "/services#software" },
+    { label: "AI Chatbots", href: "/services#chatbots" },
+    { label: "Office Management", href: "/services#oms" },
     { label: "System Integration", href: "/services#integration" },
   ],
   Company: [
     { label: "About Us", href: "/about" },
     { label: "Portfolio", href: "/portfolio" },
+    { label: "julay.org", href: "https://julay.org" },
     { label: "Contact", href: "/contact" },
   ],
   Legal: [
@@ -32,17 +33,19 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
                 <Zap size={16} className="text-white" strokeWidth={2.5} />
               </div>
-              <span className="text-lg font-bold tracking-tight text-white">JULAY</span>
+              <span className="text-lg font-bold tracking-tight text-white">
+                Julay <span className="text-indigo-400">Group</span>
+              </span>
             </Link>
             <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
-              We build scalable digital products that power businesses forward — with precision, performance, and purpose.
+              Julay Group LLC — US-registered DevOps & software company delivering enterprise automation, AI chatbots, and cloud infrastructure.
             </p>
             <div className="flex items-center gap-3 mt-6">
               {[
                 { icon: Twitter, href: "#" },
-                { icon: Github, href: "#" },
+                { icon: Github, href: "https://github.com/julaygroup" },
                 { icon: Linkedin, href: "#" },
-                { icon: Mail, href: "mailto:hello@julay.dev" },
+                { icon: Mail, href: "mailto:hello@julaygroup.com" },
               ].map(({ icon: Icon, href }, i) => (
                 <a
                   key={i}
@@ -79,7 +82,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-zinc-600 text-sm">
-            © {new Date().getFullYear()} JULAY. All rights reserved.
+            © {new Date().getFullYear()} Julay Group LLC. All rights reserved. · United States
           </p>
           <p className="text-zinc-600 text-sm">
             Built with precision. Delivered with purpose.

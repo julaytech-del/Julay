@@ -1,70 +1,70 @@
 import Link from "next/link";
 import {
-  Globe,
-  Smartphone,
-  Monitor,
+  GitBranch,
   Cloud,
-  Brain,
+  Code2,
+  MessageSquare,
+  LayoutDashboard,
   Settings2,
   ArrowRight,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "Web Development",
+    icon: GitBranch,
+    title: "DevOps & CI/CD",
     description:
-      "Full-stack web applications with React, Next.js, and modern backends that scale to millions.",
+      "Automated deployment pipelines, infrastructure as code, containerization with Docker & Kubernetes on AWS.",
     color: "from-indigo-500/20 to-indigo-500/5",
     border: "border-indigo-500/20",
     iconColor: "text-indigo-400",
-    href: "/services#web",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Apps",
-    description:
-      "Native iOS & Android experiences and cross-platform apps users love.",
-    color: "from-violet-500/20 to-violet-500/5",
-    border: "border-violet-500/20",
-    iconColor: "text-violet-400",
-    href: "/services#mobile",
-  },
-  {
-    icon: Monitor,
-    title: "Desktop Software",
-    description:
-      "High-performance desktop applications for Windows, macOS, and Linux.",
-    color: "from-cyan-500/20 to-cyan-500/5",
-    border: "border-cyan-500/20",
-    iconColor: "text-cyan-400",
-    href: "/services#desktop",
+    href: "/services#devops",
   },
   {
     icon: Cloud,
-    title: "SaaS Platforms",
+    title: "Cloud Infrastructure",
     description:
-      "End-to-end SaaS products with multi-tenancy, billing, and infinite scalability.",
-    color: "from-emerald-500/20 to-emerald-500/5",
-    border: "border-emerald-500/20",
-    iconColor: "text-emerald-400",
-    href: "/services#saas",
+      "AWS architecture design, auto-scaling, high availability, cost optimization, and 24/7 monitoring.",
+    color: "from-cyan-500/20 to-cyan-500/5",
+    border: "border-cyan-500/20",
+    iconColor: "text-cyan-400",
+    href: "/services#cloud",
   },
   {
-    icon: Brain,
-    title: "AI Solutions",
+    icon: Code2,
+    title: "Custom Software",
     description:
-      "Intelligent systems powered by LLMs, automation pipelines, and custom ML models.",
+      "Full-stack enterprise applications, SaaS platforms, and web apps built with React, Next.js, and Node.js.",
+    color: "from-violet-500/20 to-violet-500/5",
+    border: "border-violet-500/20",
+    iconColor: "text-violet-400",
+    href: "/services#software",
+  },
+  {
+    icon: MessageSquare,
+    title: "AI Chatbots",
+    description:
+      "Intelligent chatbot systems for government agencies, enterprises, and service organizations — powered by LLMs.",
     color: "from-pink-500/20 to-pink-500/5",
     border: "border-pink-500/20",
     iconColor: "text-pink-400",
-    href: "/services#ai",
+    href: "/services#chatbots",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Office Management Systems",
+    description:
+      "End-to-end digital workplace platforms: HR, inventory, scheduling, reporting, and workflow automation.",
+    color: "from-emerald-500/20 to-emerald-500/5",
+    border: "border-emerald-500/20",
+    iconColor: "text-emerald-400",
+    href: "/services#oms",
   },
   {
     icon: Settings2,
     title: "System Integration",
     description:
-      "Seamlessly connect APIs, databases, and third-party platforms into unified systems.",
+      "Seamlessly connect APIs, legacy systems, databases, and third-party platforms into unified ecosystems.",
     color: "from-amber-500/20 to-amber-500/5",
     border: "border-amber-500/20",
     iconColor: "text-amber-400",
@@ -82,10 +82,10 @@ export default function ServicesPreview() {
             What We Build
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            End-to-End Software Solutions
+            What Julay Group Builds
           </h2>
           <p className="text-zinc-400 max-w-xl mx-auto text-lg">
-            From MVP to enterprise — we cover every layer of the stack.
+            From DevOps pipelines to AI chatbots — we cover every layer of modern enterprise technology.
           </p>
         </div>
 

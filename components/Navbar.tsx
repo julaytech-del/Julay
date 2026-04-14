@@ -46,7 +46,7 @@ export default function Navbar() {
               <Zap size={16} className="text-white" strokeWidth={2.5} />
             </div>
             <span className="text-lg font-bold tracking-tight text-white">
-              JULAY
+              Julay <span className="text-indigo-400">Group</span>
             </span>
           </Link>
 

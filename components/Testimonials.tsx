@@ -2,27 +2,27 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO, NexaPay",
-    avatar: "SC",
+    name: "David R.",
+    role: "IT Director, Municipal Agency",
+    avatar: "DR",
     quote:
-      "JULAY took our fragmented fintech concept and built it into a production-grade platform in under 4 months. The architecture is clean, the code is maintainable, and performance is exceptional.",
+      "Julay Group deployed our citizen-facing chatbot in under 6 weeks. It now handles 80% of routine inquiries automatically, freeing our staff for complex cases. The accuracy and uptime have been outstanding.",
     stars: 5,
   },
   {
-    name: "Marcus Williams",
-    role: "Founder, FlowSync",
-    avatar: "MW",
+    name: "Omar K.",
+    role: "CTO, Regional Enterprise",
+    avatar: "OK",
     quote:
-      "What sets JULAY apart is their ability to understand business problems — not just technical specs. They pushed back on bad ideas and suggested smarter solutions. Real partners, not just contractors.",
+      "Their DevOps team transformed our deployment process from weeks-long manual releases to fully automated CI/CD. Zero-downtime deploys on AWS, every single time. Real infrastructure professionals.",
     stars: 5,
   },
   {
-    name: "Aisha Patel",
-    role: "VP Engineering, HealthTrack",
-    avatar: "AP",
+    name: "Lisa M.",
+    role: "Operations Manager, Corp",
+    avatar: "LM",
     quote:
-      "The AI integration work JULAY delivered was beyond our expectations. Complex ML pipelines made production-ready with zero downtime and full monitoring. I'd use them again without question.",
+      "The office management system Julay Group built replaced five separate tools we were juggling. HR, scheduling, and inventory are now in one place with real-time reporting. ROI was visible in the first month.",
     stars: 5,
   },
 ];

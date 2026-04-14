@@ -4,34 +4,37 @@ import Badge from "@/components/ui/Badge";
 
 const projects = [
   {
-    title: "NexaPay",
-    category: "SaaS / FinTech",
+    title: "julay.org",
+    category: "AI Productivity Platform",
     description:
-      "A multi-tenant payment processing platform handling $2M+ in monthly transactions with real-time fraud detection.",
-    stack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Redis"],
+      "Our flagship AI-powered productivity platform — intelligent task automation, smart workflows, and real-time collaboration for modern teams.",
+    stack: ["Next.js", "Node.js", "PostgreSQL", "Claude AI", "AWS"],
     gradient: "from-indigo-500/20 via-violet-500/10 to-transparent",
-    badge: "SaaS Platform",
+    badge: "Live Product",
     badgeVariant: "purple" as const,
+    href: "https://julay.org",
   },
   {
-    title: "FlowSync",
-    category: "Enterprise / Automation",
+    title: "ChatBot Suite",
+    category: "AI / Enterprise",
     description:
-      "Workflow automation suite for mid-size enterprises — integrating 40+ tools and reducing ops overhead by 70%.",
-    stack: ["React", "Python", "FastAPI", "PostgreSQL", "Docker"],
+      "Multi-channel AI chatbot platform for government agencies and enterprises — handling thousands of daily inquiries with 95%+ resolution rate.",
+    stack: ["React", "Python", "FastAPI", "Claude AI", "Docker", "AWS"],
     gradient: "from-cyan-500/15 via-teal-500/8 to-transparent",
-    badge: "Enterprise",
+    badge: "AI Chatbots",
     badgeVariant: "cyan" as const,
+    href: "/portfolio",
   },
   {
-    title: "HealthTrack AI",
-    category: "AI / Mobile",
+    title: "OfficePilot",
+    category: "Office Management System",
     description:
-      "AI-powered health monitoring app with personalized insights, wearable sync, and predictive health scoring.",
-    stack: ["React Native", "Python", "TensorFlow", "Firebase"],
+      "Comprehensive office management platform — HR workflows, inventory tracking, scheduling, and executive dashboards in one unified system.",
+    stack: ["React", "Node.js", "MongoDB", "Redis", "AWS EC2"],
     gradient: "from-emerald-500/15 via-green-500/8 to-transparent",
-    badge: "AI + Mobile",
+    badge: "Enterprise",
     badgeVariant: "green" as const,
+    href: "/portfolio",
   },
 ];
 
@@ -60,9 +63,12 @@ export default function PortfolioPreview() {
         {/* Projects */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div
+            <a
               key={project.title}
-              className={`group rounded-2xl bg-gradient-to-br ${project.gradient} border border-white/[0.07] overflow-hidden hover:border-white/[0.14] transition-all duration-300 flex flex-col`}
+              href={project.href}
+              target={project.href.startsWith("http") ? "_blank" : undefined}
+              rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className={`group rounded-2xl bg-gradient-to-br ${project.gradient} border border-white/[0.07] overflow-hidden hover:border-white/[0.14] transition-all duration-300 flex flex-col hover:scale-[1.02]`}
             >
               {/* Image placeholder */}
               <div className="h-48 bg-white/[0.03] border-b border-white/5 flex items-center justify-center relative">
@@ -98,7 +104,7 @@ export default function PortfolioPreview() {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

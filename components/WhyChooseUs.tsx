@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
           {/* Left */}
           <div>
             <p className="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-3">
-              Why JULAY
+              Why Julay Group
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               Built Different.
@@ -60,14 +60,14 @@ export default function WhyChooseUs() {
               <span className="text-gradient">Delivered Better.</span>
             </h2>
             <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              We don't just write code. We engineer systems that become strategic assets — growing in value as your business grows.
+              We don't just deploy code — we build DevOps cultures, automate operations, and ship AI-powered systems that become your competitive edge.
             </p>
             <div className="flex flex-col gap-3">
               {[
-                "No offshore handoffs — senior engineers on every project",
-                "Transparent roadmaps and realistic timelines",
-                "Long-term partnerships, not one-off transactions",
-                "Deep expertise in modern stacks and emerging tech",
+                "US-registered LLC — Julay Group LLC, United States",
+                "End-to-end DevOps: from code to cloud in one pipeline",
+                "AI chatbots trained for your specific domain and workflows",
+                "Deep expertise in AWS, Docker, Kubernetes, and modern stacks",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-3 text-zinc-300 text-sm">
                   <CheckCircle2 size={16} className="text-indigo-400 mt-0.5 shrink-0" />

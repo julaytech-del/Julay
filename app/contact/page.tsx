@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Mail, MessageSquare, Send, CheckCircle2, ArrowRight, Clock, Globe } from "lucide-react";
 
 const services = [
-  "Web Development",
-  "Mobile App",
-  "Desktop Software",
-  "SaaS Platform",
-  "AI Solution",
+  "DevOps & CI/CD",
+  "Cloud Infrastructure (AWS)",
+  "Custom Software Development",
+  "AI Chatbot",
+  "Office Management System",
   "System Integration",
   "Not sure yet",
 ];
@@ -81,10 +81,10 @@ export default function ContactPage() {
                   For project inquiries and partnerships
                 </p>
                 <a
-                  href="mailto:hello@julay.dev"
+                  href="mailto:hello@julaygroup.com"
                   className="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors"
                 >
-                  hello@julay.dev
+                  hello@julaygroup.com
                 </a>
               </div>
 

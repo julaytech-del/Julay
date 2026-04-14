@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <Badge variant="purple" className="text-sm px-4 py-1.5">
             <Sparkles size={12} />
-            Premium Software Development
+            DevOps &amp; Software Solutions — US Registered
           </Badge>
         </div>
 
@@ -41,7 +41,7 @@ export default function Hero() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-400 leading-relaxed mb-10">
-          JULAY engineers high-performance web apps, mobile solutions, SaaS platforms, and AI-powered systems that drive real business growth — built to scale from day one.
+          Julay Group LLC automates your infrastructure with DevOps pipelines, deploys intelligent AI chatbots, and builds enterprise office management systems — engineered to scale from day one.
         </p>
 
         {/* CTAs */}
@@ -65,8 +65,8 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
           {[
             { icon: Shield, label: "Enterprise-Grade Security" },
-            { icon: Zap, label: "Lightning-Fast Performance" },
-            { icon: Sparkles, label: "AI-Powered Solutions" },
+            { icon: Zap, label: "Automated CI/CD Pipelines" },
+            { icon: Sparkles, label: "AI-Powered Chatbots" },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2 text-zinc-500 text-sm">
               <Icon size={14} className="text-indigo-400" />
