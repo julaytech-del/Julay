@@ -34,19 +34,25 @@ jobs:
           NODE_ENV: production
 
       - name: Setup SSH key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_KEY }}
+          SSH_HOST: ${{ secrets.SERVER_HOST }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.SERVER_KEY }}" > ~/.ssh/deploy_key
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
 
       - name: Test SSH connection
+        env:
+          SSH_HOST: ${{ secrets.SERVER_HOST }}
+          SSH_USER: ${{ secrets.SERVER_USER }}
         run: |
           ssh -i ~/.ssh/deploy_key \
             -o StrictHostKeyChecking=no \
             -o IdentitiesOnly=yes \
             -o ConnectTimeout=15 \
-            "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}" \
+            "${SSH_USER}@${SSH_HOST}" \
             "echo '✓ SSH OK' && whoami"
 
       - name: Deploy to AWS EC2
