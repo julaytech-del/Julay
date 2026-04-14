@@ -36,33 +36,27 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SERVER_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.SERVER_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
 
-      - name: Deploy to AWS EC2
+      - name: Test SSH connection
         run: |
           ssh -i ~/.ssh/deploy_key \
             -o StrictHostKeyChecking=no \
             -o IdentitiesOnly=yes \
-            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'ENDSSH'
-            set -e
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            -o ConnectTimeout=15 \
+            "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}" \
+            "echo '✓ SSH OK' && whoami"
 
-            echo "📥 Pulling latest code..."
-            cd /var/www/julaygroup.com
-            git pull origin main
-
-            echo "📦 Installing dependencies..."
-            npm ci --prefer-offline
-
-            echo "🔨 Building application..."
-            NEXT_PUBLIC_SITE_URL=https://julaygroup.com npm run build
-
-            echo "🚀 Restarting with PM2..."
-            pm2 restart julaygroup-website 2>/dev/null || pm2 start ecosystem.config.js
-            pm2 save
-
-            echo "✅ Deployed at $(date '+%Y-%m-%d %H:%M:%S UTC')"
-          ENDSSH
+      - name: Deploy to AWS EC2
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+        run: |
+          ssh -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=no \
+            -o IdentitiesOnly=yes \
+            -o ConnectTimeout=30 \
+            "${SERVER_USER}@${SERVER_HOST}" \
+            'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && cd /var/www/julaygroup.com && git pull origin main && npm ci --prefer-offline && NEXT_PUBLIC_SITE_URL=https://julaygroup.com npm run build && pm2 restart julaygroup-website && pm2 save && echo "✅ Deployed at $(date)"'
