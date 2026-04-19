@@ -41,7 +41,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden scroll-section">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-violet-600/6 rounded-full blur-[120px]" />
